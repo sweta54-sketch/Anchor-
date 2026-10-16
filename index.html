@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Anchor: wellbeing for special educators</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FFF8F0;--surf:#fff;--ink:#1B1B1E;--mut:#58636b;--pri:#0F4C5C;--onpri:#fff;--soft:#E2EEEE;--line:#E8DFD3;--acc:#E36414;--warn:#FDF0D0;--warnink:#6b4a00;--bad:#FBE4D8;--badink:#8a2f00;--ok:#DDEFE5;--okink:#1d5a36;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101719;--surf:#182226;--ink:#F1EDE6;--mut:#a5b2b8;--pri:#7CC3CF;--onpri:#08262d;--soft:#1f3238;--line:#2b3a40;--acc:#F28A4B;--warn:#3a2f10;--warnink:#f4d58a;--bad:#3d2216;--badink:#ffb48f;--ok:#17331f;--okink:#a8e0bb;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#101719;--surf:#182226;--ink:#F1EDE6;--mut:#a5b2b8;--pri:#7CC3CF;--onpri:#08262d;--soft:#1f3238;--line:#2b3a40;--acc:#F28A4B;--warn:#3a2f10;--warnink:#f4d58a;--bad:#3d2216;--badink:#ffb48f;--ok:#17331f;--okink:#a8e0bb;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);height:100%}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font:16px/1.55 Lato,system-ui,-apple-system,"Segoe UI",sans-serif;padding-bottom:84px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.2;margin:0 0 .5rem;color:var(--pri)}
+h1{font-size:2rem}h2{font-size:1.35rem}h3{font-size:1.05rem}
+p{margin:0 0 .8rem}.mut{color:var(--mut)}.sm{font-size:.88rem}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--bg);border-bottom:1px solid var(--line)}
+.bar{max-width:640px;margin:0 auto;padding:10px 18px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.brand{display:flex;align-items:center;gap:8px;font:600 1.3rem Fraunces,Georgia,serif;color:var(--pri)}
+.brand svg{width:26px;height:26px}
+main{max-width:640px;margin:0 auto;padding:22px 18px}
+.card{background:var(--surf);border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:14px}
+.card.soft{background:var(--soft);border-color:transparent}
+.btn{font:700 1rem Lato,sans-serif;border:2px solid var(--pri);background:var(--pri);color:var(--onpri);border-radius:10px;padding:12px 18px;min-height:46px;cursor:pointer;margin:0 8px 8px 0}
+.btn.alt{background:transparent;color:var(--pri)}.btn.sos{background:var(--bad);border-color:var(--bad);color:var(--badink);padding:8px 12px;min-height:40px;margin:0;font-size:.9rem}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,textarea:focus-visible,label:focus-within{outline:3px solid var(--acc);outline-offset:2px}
+nav{position:fixed;bottom:0;left:0;right:0;background:var(--surf);border-top:1px solid var(--line);z-index:9;padding-bottom:env(safe-area-inset-bottom,0px)}
+nav div{max-width:640px;margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr)}
+nav button{background:none;border:0;padding:14px 2px;font:700 .8rem Lato,sans-serif;color:var(--mut);cursor:pointer;border-top:3px solid transparent}
+nav button[aria-current=page]{color:var(--pri);border-top-color:var(--acc)}
+.opts{display:grid;gap:8px}.opts .btn{margin:0;text-align:left;background:var(--surf);color:var(--ink);border:2px solid var(--line)}
+.opts .btn:hover{border-color:var(--pri)}
+.prog{height:6px;border-radius:3px;background:var(--line);margin-bottom:16px;overflow:hidden}.prog i{display:block;height:100%;background:var(--acc)}
+.step{display:flex;gap:12px;width:100%;text-align:left;background:var(--surf);border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:10px;cursor:pointer;font:inherit;color:inherit}
+.step b{font:600 1.2rem Fraunces,Georgia,serif;color:var(--acc);min-width:1.2rem}.step span{display:block}
+.note{border-radius:12px;padding:14px;margin-bottom:14px}.n-ok{background:var(--ok);color:var(--okink)}.n-warn{background:var(--warn);color:var(--warnink)}.n-bad{background:var(--bad);color:var(--badink)}
+.meter{margin:10px 0}.meter div{display:flex;justify-content:space-between;font-size:.92rem}.meter i{display:block;height:10px;border-radius:5px;background:var(--line);margin-top:4px;overflow:hidden}.meter i b{display:block;height:100%;background:var(--pri)}
+details{border-bottom:1px solid var(--line);padding:10px 0}summary{cursor:pointer;font-weight:700;color:var(--pri)}details p{margin:.6rem 0 0}
+.breath{display:grid;place-items:center;padding:10px 0}.orb{width:140px;height:140px;border-radius:50%;background:var(--soft);border:3px solid var(--pri);display:grid;place-items:center;font:600 1.1rem Fraunces,Georgia,serif;color:var(--pri);transition:transform 4s ease-in-out}
+@media(prefers-reduced-motion:reduce){.orb{transition:none}}
+.line{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--line)}.line:last-child{border:0}
+.line a{font-weight:700;color:var(--pri)}
+textarea,input[type=number]{width:100%;font:inherit;color:var(--ink);background:var(--bg);border:2px solid var(--line);border-radius:10px;padding:10px}
+label.f{display:block;margin-bottom:10px;font-weight:700;font-size:.92rem}
+fieldset{border:0;padding:0;margin:0 0 14px}legend{font-weight:700;margin-bottom:6px;padding:0}
+.seg{display:flex;gap:6px;flex-wrap:wrap}.seg label{border:2px solid var(--line);border-radius:8px;padding:6px 12px;cursor:pointer;background:var(--surf)}.seg input{position:absolute;opacity:0}
+.seg label:has(input:checked){background:var(--pri);color:var(--onpri);border-color:var(--pri)}
+dialog{border:0;border-radius:16px;padding:20px;max-width:440px;width:calc(100% - 32px);background:var(--surf);color:var(--ink)}dialog::backdrop{background:#0008}
+.toast{position:fixed;left:50%;bottom:96px;transform:translateX(-50%);background:var(--pri);color:var(--onpri);padding:10px 16px;border-radius:10px;z-index:20;font-weight:700}
+/* trust palette + clean refresh */
+:root{--bg:#F3F7FB;--surf:#fff;--ink:#14202E;--mut:#56687C;--pri:#1D4E89;--onpri:#fff;--soft:#E3EDF8;--line:#DCE5EE;--acc:#1F9D8B;--warn:#FFF3D1;--warnink:#7A5600;--bad:#FDE7E7;--badink:#9B1C1C;--ok:#DFF3EA;--okink:#17603D}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0D1520;--surf:#152130;--ink:#EAF0F7;--mut:#9FB0C3;--pri:#7DB4F2;--onpri:#08203A;--soft:#1B2D42;--line:#25384D;--acc:#4FC9B6;--warn:#3A2F12;--warnink:#F2D48A;--bad:#3D1E22;--badink:#FFB4B4;--ok:#14352A;--okink:#9DE0BF}}
+:root[data-theme="dark"]{--bg:#0D1520;--surf:#152130;--ink:#EAF0F7;--mut:#9FB0C3;--pri:#7DB4F2;--onpri:#08203A;--soft:#1B2D42;--line:#25384D;--acc:#4FC9B6;--warn:#3A2F12;--warnink:#F2D48A;--bad:#3D1E22;--badink:#FFB4B4;--ok:#14352A;--okink:#9DE0BF}
+body,.btn,nav button,textarea,input{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
+h1,h2,h3,.brand,.orb,.step b{font-family:Manrope,Inter,system-ui,sans-serif;font-weight:700;letter-spacing:-.01em}
+h1{font-size:1.9rem}
+header{background:var(--surf);border:0;box-shadow:0 1px 0 var(--line)}body::before{background:var(--surf)}
+.brand .logo{width:34px;height:34px}.brand{font-size:1.25rem}
+.card{border:0;border-radius:18px;padding:20px;margin-bottom:16px;box-shadow:0 1px 2px rgba(20,40,70,.06),0 8px 24px rgba(20,40,70,.05)}
+.card.soft{box-shadow:none}
+.ic{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.card>h2,.card>h3{display:flex;align-items:center;gap:10px;margin-bottom:.7rem}
+.card>h2 .ic,.card>h3 .ic{width:36px;height:36px;padding:8px;border-radius:11px;background:var(--soft);color:var(--pri)}
+.hero{display:flex;align-items:center;gap:14px;margin-bottom:12px}.hero .logo{width:60px;height:60px;flex:none}
+.btn{border-radius:12px;font-weight:600}.btn.alt{border-color:var(--line);background:var(--surf)}
+.step{border:0;border-radius:16px;box-shadow:0 1px 2px rgba(20,40,70,.06),0 6px 18px rgba(20,40,70,.04);align-items:center}
+.step b{background:var(--soft);color:var(--pri);width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-size:1rem}
+nav{box-shadow:0 -6px 20px rgba(20,40,70,.06);border:0}
+nav button{display:flex;flex-direction:column;align-items:center;gap:3px;border-top:0;font-weight:600;font-size:.74rem;padding:10px 2px}
+nav .ic{width:22px;height:22px}
+nav button[aria-current=page] .ic{background:var(--soft);box-sizing:content-box;border-radius:10px;padding:2px 12px}
+.plan label{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-top:1px solid var(--line);cursor:pointer}
+.plan input{width:22px;height:22px;accent-color:var(--pri);margin:0;flex:none}
+.plan label.done span{text-decoration:line-through;color:var(--mut)}
+.prog i,.meter i b{background:var(--acc)}
+.gcard{background:var(--soft);border-radius:14px;padding:20px 16px;font:700 1.05rem Manrope,Inter,sans-serif;text-align:center;margin:8px 0 6px}
+.beam{transform-origin:100px 40px;transition:transform .9s ease}
+.tabs{display:flex;gap:4px;background:var(--soft);padding:4px;border-radius:12px;margin:0 0 16px}
+.tabs button{flex:1;border:0;border-radius:9px;padding:10px 4px;font:600 .9rem Inter,system-ui,sans-serif;background:none;color:var(--mut);cursor:pointer}
+.tabs button[aria-pressed=true]{background:var(--surf);color:var(--pri);box-shadow:0 1px 3px rgba(20,40,70,.18)}
+input[type=text]{width:100%;font:inherit;color:var(--ink);background:var(--bg);border:2px solid var(--line);border-radius:10px;padding:10px;margin-bottom:10px}
+@keyframes sh{0%,100%{transform:rotate(0)}20%{transform:rotate(-4deg)}40%{transform:rotate(4deg)}60%{transform:rotate(-3deg)}80%{transform:rotate(3deg)}}
+.shake{animation:sh .6s ease;transform-origin:50% 90%}
+@media(prefers-reduced-motion:reduce){.shake{animation:none}}
+details.card{border-bottom:0;padding:16px 20px}details.card summary{font-size:1.05rem}
+@media(prefers-reduced-motion:reduce){.beam{transition:none}}
+</style>
+</head>
+<body>
+<header><div class="bar">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="logo" viewBox="0 0 32 32"><rect width="32" height="32" rx="9" fill="var(--pri)"/><g fill="none" stroke="var(--onpri)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 12v13M11.5 15.5h9M7 19.5c.7 4 4.3 5.8 9 5.8s8.3-1.8 9-5.8"/><path d="M16 11.5c-3.2-2.3-4-4.7-2.5-6 1.1-.9 2.2-.4 2.5.6.3-1 1.4-1.5 2.5-.6 1.5 1.3.7 3.7-2.5 6z" fill="var(--onpri)" stroke-width="1.2"/></g></symbol>
+<symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11l9-8 9 8M5 9.5V20h14V9.5"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M9 4h6v3H9zM7 5.5H5V21h14V5.5h-2M9 14l2 2 4-4"/></symbol>
+<symbol id="i-learn" viewBox="0 0 24 24"><path d="M3 5h7a2 2 0 0 1 2 2v13a2 2 0 0 0-2-2H3zM21 5h-7a2 2 0 0 0-2 2v13a2 2 0 0 1 2-2h7z"/></symbol>
+<symbol id="i-help" viewBox="0 0 24 24"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"/></symbol>
+<symbol id="i-impact" viewBox="0 0 24 24"><path d="M5 20v-9M12 20V4M19 20v-6"/></symbol>
+<symbol id="i-breathe" viewBox="0 0 24 24"><path d="M3 8h11a3 3 0 1 0-3-3M3 12h16a3 3 0 1 1-3 3M3 16h7a2.5 2.5 0 1 1-2.5 2.5"/></symbol>
+<symbol id="i-sign" viewBox="0 0 24 24"><path d="M12 3v18M5 6h11l3 2.5-3 2.5H5zM8 14h11l-3 2.5"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+<symbol id="i-msg" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></symbol>
+<symbol id="i-work" viewBox="0 0 24 24"><path d="M3 8h18v12H3zM9 8V5h6v3M3 13h18"/></symbol>
+<symbol id="i-lock" viewBox="0 0 24 24"><path d="M6 11h12v9H6zM8 11V8a4 4 0 0 1 8 0v3"/></symbol>
+<symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></symbol>
+<symbol id="i-pulse" viewBox="0 0 24 24"><path d="M3 12h4l2-6 4 12 2-6h6"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM12 7v5l3 2"/></symbol>
+<symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3l2 6 6 2-6 2-2 6-2-6-6-2 6-2z"/></symbol>
+</defs></svg>
+<div class="brand"><svg class="logo" aria-hidden="true"><use href="#logo"/></svg>Anchor</div>
+<button class="btn sos" data-a="sos">Need help now</button></div></header>
+<main id="main"></main>
+<nav aria-label="Main"><div id="tabs"></div></nav>
+<dialog id="sos" aria-labelledby="st"><h2 id="st">If you need to talk to someone now</h2>
+<p class="sm mut">You don't have to be in crisis to call. These lines are free and open to anyone in India.</p>
+<div id="sosl"></div>
+<p class="sm"><b>If you or someone near you is in immediate danger, call 112.</b></p>
+<button class="btn" data-a="close">Close</button></dialog>
+
+<script>
+const TABS=[["home","Home"],["check","Check-in"],["learn","Learn"],["help","Support"],["impact","Impact"]];
+const LINES=[["Tele-MANAS (24/7, govt. of India)","14416","14416"],["KIRAN mental health helpline (24/7)","1800-599-0019","18005990019"],["iCall (Mon–Sat, 10am–8pm)","9152987821","9152987821"],["Emergency services","112","112"]];
+const ITEMS=[
+["e","I feel drained by the end of the school day."],["e","I start the day already tired at the thought of work."],["e","Weekends and breaks don't help me recover."],
+["d","I have less patience or warmth for students or parents than I used to."],["d","I feel like I'm going through the motions at work."],["d","I avoid colleagues or conversations about work."],
+["f","I feel my work makes a difference for my students."],["f","I can handle difficult incidents without carrying them home."],["f","I feel able to ask for help when I need it."],
+["s","I've had thoughts of harming myself, or that life isn't worth living."]];
+const SC=["Never","Rarely","Sometimes","Often","Always"];
+const DIM={e:["Exhaustion","Protect one real recovery block this week: a proper lunch break and one work-free evening."],d:["Detachment","Book one 10-minute peer debrief this week. Detachment often eases when the load is shared."],f:["Sense of effectiveness","Write down three things that went right with students this week, and take one hard case to supervision."]};
+const QUIZ=[["Burnout is a sign of personal weakness.",false],["Growing cynicism toward students can be an early warning sign.",true],["Burnout is caused only by how an individual copes, not by workplace conditions.",false],["Peer debriefs and supervision can protect against burnout.",true],["Sleep problems or illness lasting for weeks are worth discussing with a doctor.",true]];
+const PULSE=[["I'd feel comfortable telling a colleague I'm struggling.",1],["Seeking counselling is a sign of strength.",1],["My school would support me if I asked for help.",1],["Struggling at work means I'm not cut out for this job.",-1]];
+const LEARN=[
+["Burnout, compassion fatigue and secondary trauma","Burnout comes from long-term job strain: exhaustion, cynicism and feeling ineffective. Compassion fatigue is a gradual drain of empathy from sustained caregiving. Secondary traumatic stress is trauma-like symptoms after exposure to a student's or family's distress. They overlap, and none is a personal failing."],
+["Setting a boundary without guilt","Try: \"I can take this on after the IEP reviews are done. Can we look at the deadline together?\" Name what you can do, not only what you can't. Boundaries protect your quality of teaching."],
+["Grounding in 60 seconds (5-4-3-2-1)","Notice 5 things you see, 4 you can touch, 3 you hear, 2 you smell, 1 you taste. Use it after a meltdown or incident, before you walk into the next class."],
+["After a hard incident: a 3-step debrief","1. Make sure everyone is safe and you've had water and a pause. 2. Tell one colleague what happened, facts first, feelings second. 3. Record it once, factually, and let it stay at work."],
+["Protect your voice and back","Sip water through the day and rest your voice between sessions. When lifting or physically guiding a student, use trained techniques and ask for a second person. Take a movement break at least once every two hours."],
+["Vicarious trauma and secondary traumatic stress","Vicarious trauma is a lasting shift in how you see the world after repeatedly engaging with other people's trauma. Secondary traumatic stress is trauma-like symptoms, such as intrusive thoughts or feeling on edge, after exposure to a student's or family's distress. Both are occupational hazards, not personal failings."],["Countertransference and isolation","Countertransference is when a student's or parent's story stirs your own feelings or history, such as over-rescuing or unexplained irritation. Notice it and name it in supervision. Isolation makes it heavier, so find a peer to debrief with."],["Sleep, movement and CPD","Keep a steady sleep and wake time. Move for a few minutes between sessions to offset sedentary routines and physical strain. CPD in behaviour management and trauma-informed care builds confidence and lowers strain."],["Keeping paperwork manageable","Use shared templates for IEPs and progress notes. Batch records into one protected slot a day, and tell your supervisor when documentation is crowding out planning time."]];
+const LADDER=[["A trusted colleague","Start here for a quick debrief."],["Supervisor or peer circle","For workload, case discussions and reflective practice."],["Counsellor or psychologist","If symptoms last more than two weeks, or affect sleep, mood or relationships."],["Doctor, psychiatrist or trauma-informed therapist","For persistent symptoms, medication questions, trauma-related distress, or occupational health support."]];
+const MSG={colleague:"Hi, I've had a heavy few weeks and would value 10 minutes to talk it through. Are you free after school this week?",supervisor:"Hello, I'd like to set up a time to discuss my workload and how I'm managing. I've noticed I'm more stretched than usual and want to plan support before it affects my students. Could we meet this week?",counsellor:"Hello, I work as a special educator and have been feeling exhausted and low on energy for a while. I'd like to book a first session. What times are available?"};
+
+let S;try{S=JSON.parse(localStorage.getItem("anchor")||"{}")}catch(e){S={}}
+S.ci=S.ci||[];
+const save=()=>{try{localStorage.setItem("anchor",JSON.stringify(S))}catch(e){}};
+let st={tab:"home",q:null,res:null,wl:""};
+const $=s=>document.querySelector(s),dt=t=>new Date(t).toLocaleDateString(undefined,{day:"numeric",month:"short"});
+const level=o=>o<35?["Steady","n-ok","Your load looks manageable right now. Keep your routines and check in again in a week or two."]:o<60?["Stretched","n-warn","You're carrying a lot. Small changes now help most. Pick one suggestion below and tell someone you trust."]:["Strained","n-bad","Your answers suggest strain that's worth talking about. Please consider speaking with a counsellor or psychologist, and see a doctor if symptoms last more than two weeks."];
+const meter=(n,v)=>`<div class="meter"><div><span>${n}</span><span>${v}%</span></div><i><b style="width:${v}%"></b></i></div>`;
+const seg=(n,opts)=>`<div class="seg">${opts.map(([v,l])=>`<label><input type="radio" name="${n}" value="${v}">${l}</label>`).join("")}</div>`;
+const mean=a=>a.reduce((x,y)=>x+y,0)/a.length;
+
+function toast(m){const t=document.createElement("div");t.className="toast";t.setAttribute("role","status");t.textContent=m;document.body.appendChild(t);setTimeout(()=>t.remove(),2200)}
+function copy(txt){try{navigator.clipboard.writeText(txt).then(()=>toast("Copied"),()=>fb())}catch(e){fb()}
+function fb(){const ta=$("#msg")||$("#wlo");if(ta){ta.select();try{document.execCommand("copy");toast("Copied")}catch(e){toast("Select the text and copy it")}}}}
+const crisisBox=`<div class="note n-bad" role="alert"><b>Thank you for answering honestly.</b> Thoughts like these deserve support from a real person. Please talk to someone today: call <a href="tel:14416"><b>Tele-MANAS 14416</b></a> or <a href="tel:18005990019"><b>KIRAN 1800-599-0019</b></a>, or tell someone you trust. If you're in immediate danger, call <a href="tel:112"><b>112</b></a>.</div>`;
+
+const IC={"One-minute breathing":"breathe","Short guides":"learn","Weigh Anchor":"spark","Where to go":"sign","Helplines in India":"phone","Draft a message to ask for support":"msg","Workload snapshot":"work","Your privacy":"lock","Knowledge quiz":"bulb","Stigma pulse check":"pulse","Your progress":"impact","The pledge":"help","Feedback":"msg","Your history":"clock","One thing to try this week":"spark","Today's plan":"check","Win jar":"spark","Warning signs":"pulse","Self-care toolkit":"help","Stress reset":"bulb","Support a colleague":"help","Run a 30-minute peer circle":"clock","For school leaders":"work","About Anchor":"help","Share and report":"msg","References":"learn","Warning signs worth acting on":"spark"};
+function deco(){document.querySelectorAll(".card>h2,.card>h3").forEach(h=>{const n=IC[h.textContent]||(/check-in/i.test(h.textContent)?"check":"");if(n)h.insertAdjacentHTML("afterbegin",`<svg class="ic" aria-hidden="true"><use href="#i-${n}"/></svg>`)})}
+const PLAN=["Take a proper lunch break away from your desk","Do one 60-second breathing or grounding pause","Tell a colleague one thing that went well today","Pick a closing time and stop work then","Move for five minutes between sessions","Keep a steady bedtime tonight"];
+const GAME=[["Many students and little planning time","D","A high caseload is a job demand."],["Aggression or meltdowns in class","D","Behavioural demands cost physical and emotional energy."],["Regular supervision","R","Supervision is a resource: it gives support and space to reflect."],["Heavy IEP and report paperwork","D","Paperwork is a demand, especially when planning time is short."],["A colleague to debrief with","R","Peer support helps you process hard days."],["Shared documentation templates","R","Templates cut repeated effort and free up energy."],["Unclear lines between teacher, therapist and caregiver","D","Role ambiguity is a classic job demand."],["Visible recognition from leadership","R","Recognition is a resource that restores a sense of accomplishment."]];
+function game(){const g=st.g||(st.g={i:0,d:0,r:0,ok:0,fb:""}),n=GAME.length,t=Math.max(-16,Math.min(16,(g.r-g.d)*4));
+const sc=`<svg viewBox="0 0 200 84" width="100%" role="img" aria-label="Scale holding ${g.d} demands and ${g.r} resources"><path d="M100 40v34M78 76h44" stroke="var(--pri)" stroke-width="4" stroke-linecap="round" fill="none"/><g class="beam" style="transform:rotate(${t}deg)"><path d="M28 40h144" stroke="var(--pri)" stroke-width="4" stroke-linecap="round"/><rect x="14" y="44" width="46" height="18" rx="6" fill="var(--bad)"/><rect x="140" y="44" width="46" height="18" rx="6" fill="var(--ok)"/></g><circle cx="100" cy="40" r="5" fill="var(--acc)"/></svg>`;
+const top=`<div class="line"><span>Demands: <b>${g.d}</b></span><span>Resources: <b>${g.r}</b></span></div>`;
+if(g.i<n){const c=GAME[g.i];return `<div class="card"><h2>Weigh Anchor</h2><p class="sm mut">A calm sorting game. No timer and no wrong answers, only learning. Is each item a job demand or a job resource?</p>${sc}${top}<p class="sm" aria-live="polite" style="min-height:2.8em;margin-top:8px">${g.fb}</p><div class="gcard">${c[0]}</div><p class="sm mut">Card ${g.i+1} of ${n}</p><button class="btn" data-a="gp" data-v="D">Job demand</button><button class="btn alt" data-a="gp" data-v="R">Job resource</button></div>`}
+return `<div class="card"><h2>Weigh Anchor</h2>${sc}<div class="note n-ok"><b>Balanced. You sorted ${g.ok} of ${n} correctly.</b><br>${g.fb}</div><p>The Job Demands-Resources model (Demerouti et al., 2001) says burnout rises when demands outweigh resources. You can't always remove demands, but you can add resources: supervision, a peer to debrief with, shared templates and recognition.</p><button class="btn" data-a="go" data-t="home">Go to today's plan</button><button class="btn alt" data-a="greset">Play again</button></div>`}
+const tg=(a,k)=>{const i=a.indexOf(k);i<0?a.push(k):a.splice(i,1)};
+const keep=()=>{const y=scrollY;render();scrollTo(0,y)};
+const SIGNS=[[`Emotional`,[`Persistent exhaustion`,`Irritability or numbness`,`Dreading going to school`,`Feeling ineffective`,`Loss of joy in teaching`]],[`Behavioural`,[`Withdrawing from colleagues`,`Cynicism toward students or parents`,`Skipping meetings or leave-taking`,`Cutting corners on documentation`,`Increased conflict`]],[`Physical`,[`Headaches, back and voice strain`,`Disturbed sleep`,`Frequent illness`,`Changes in appetite`,`Increased reliance on caffeine or other substances`]]];
+function signs(){S.sg=S.sg||[];const n=S.sg.length,g=new Set(S.sg.map(k=>k.split('-')[0])).size,hi=n>=3||g>=2;
+const msg=n==0?`Tick anything you have noticed in the last two weeks.`:hi?`Several signs, or signs in more than one area. Please talk to a trusted colleague or counsellor this week, and see a doctor if physical symptoms persist.`:`A few signs. Try one action from today's plan and check again soon.`;
+return `<div class='card plan'><h3>Warning signs</h3><p class='sm mut'>Tick what you have noticed lately. These are signals, not weaknesses.</p>${SIGNS.map((s,a)=>`<p style='margin:10px 0 0'><b>${s[0]}</b></p>${s[1].map((t,i)=>{const k=a+'-'+i;return `<label><input type='checkbox' data-a='sg' data-k='${k}' ${S.sg.includes(k)?'checked':''}><span>${t}</span></label>`}).join('')}`).join('')}<div class='note ${hi?'n-warn':'n-ok'}' style='margin:12px 0 0' aria-live='polite'>${msg}</div>${hi?`<button class='btn' style='margin-top:10px' data-a='go' data-t='help'>See support options</button>`:''}</div>`}
+const KIT=[[`Daily habits`,[`Short breathing or grounding breaks`,`Protected lunch and movement`,`Consistent sleep routine`,`Work stays at work`]],[`Professional habits`,[`Use supervision and peer debriefs`,`Set clear role boundaries`,`Keep documentation manageable`,`Continue CPD`]],[`Reaching out`,[`Talk to a trusted colleague`,`Approach a counsellor or psychologist`,`Seek medical help for persistent symptoms`,`Know your helpline numbers`]]];
+function toolkit(){return `<div class='card'><h3>Self-care toolkit</h3>${KIT.map(k=>`<details><summary>${k[0]}</summary><p>${k[1].join('. ')}.</p></details>`).join('')}</div>`}
+const STR=[[`High caseloads`,`List your students by urgency and pick the three who need individual planning this week. Ask your supervisor to review the rest with you.`,`I can't do everything. Doing the essential things well is the job.`],[`Paperwork burden`,`Batch records into one protected daily slot and use a shared template. Tell your supervisor when documentation crowds out planning.`,`Records protect my students and me. Good enough, done on time, is good.`],[`Limited resources`,`Write down the three aids you need most and send one specific request that names the benefit to the student.`,`I can adapt with what I have while I ask for more.`],[`Behavioural demands`,`After an incident: pause, drink water and debrief with a colleague the same day. Look for triggers and agree a response plan.`,`Behaviour is communication, not a verdict on my teaching.`],[`Role ambiguity`,`Write down what is yours, what is shared and what is not. Agree the list with your supervisor.`,`Asking for clear roles is a professional request, not a failing.`],[`Low recognition and isolation`,`Start a fortnightly peer debrief and share one win with leadership.`,`Recognition is built as well as given. My work matters even when it goes unseen.`]];
+function reset(){const s=STR[st.sr];return `<div class='card'><h3>Stress reset</h3><p class='sm mut'>Stress depends on how you appraise a demand and the resources you have (Lazarus and Folkman). Pick a stressor and ask: can I change any of it? If yes, act. If not, reappraise.</p><div class='seg' role='group' aria-label='Stressors'>${STR.map((x,i)=>`<button class='btn alt' style='margin:0 6px 6px 0;${st.sr===i?'border-color:var(--pri)':''}' data-a='sr' data-i='${i}'>${x[0]}</button>`).join('')}</div>${s?`<div class='note n-ok' style='margin-top:8px'><b>If you can change part of it (problem-focused)</b><br>${s[1]}</div><div class='note n-warn'><b>If you cannot change it yet (reappraisal)</b><br>${s[2]}</div>`:''}</div>`}
+function colleague(){return `<div class='card'><h3>Support a colleague</h3><p class='sm mut'>Small actions help: listen, check in, advocate, refer.</p>${[[`Listen`,`Give your full attention and do not rush to fix. Try saying: That sounds heavy. Do you want to vent or problem-solve?`],[`Check in`,`Ask privately and directly: You have seemed worn down lately. How are you really doing?`],[`Advocate`,`Offer to raise a workload concern together. Do not speak for them without their consent.`],[`Refer`,`Offer options, not orders: a counsellor, a doctor, a helpline. If they mention harming themselves, stay with them and call Tele-MANAS 14416 or 112.`]].map(x=>`<details><summary>${x[0]}</summary><p>${x[1]}</p></details>`).join('')}</div>`}
+function circle(){return `<div class='card'><h3>Run a 30-minute peer circle</h3><p class='sm mut'>A simple agenda for peer support in your school. Ask one colleague to co-host.</p>${[[`0-5 min`,`Arrive`,`One-word check-in from everyone.`],[`5-8`,`Ground rules`,`What is said here stays here. Listen without fixing. Anyone may pass.`],[`8-22`,`Share`,`Each person gets about four minutes on a stress or a case. Others only listen, then name one thing they heard.`],[`22-28`,`Resources`,`What helped you this week? Collect ideas to try.`],[`28-30`,`Close`,`One commitment each, then three slow breaths together.`]].map(x=>`<div class='line'><span><b>${x[1]}</b><br><span class='sm mut'>${x[2]}</span></span><span class='sm mut'>${x[0]}</span></div>`).join('')}</div>`}
+const LEAD=[[`Manageable workloads`,`Caseload caps, protected planning time, shared documentation templates.`,`Audit caseloads and block one protected planning period a week.`],[`Regular supervision`,`Clinical and peer supervision, case conferences, reflective practice.`,`Schedule monthly supervision for every educator.`],[`Psychological safety`,`Open-door leadership, non-punitive reporting, stigma-free help-seeking.`,`Open the next staff meeting by sharing a challenge of your own.`],[`Support systems`,`Counselling access, employee assistance, leave and rest policies.`,`Arrange counselling access and share the details with all staff.`],[`Training and growth`,`CPD in behaviour management, trauma-informed care and self-care skills.`,`Book one CPD session this term.`],[`Recognition`,`Fair pay, visible appreciation and career pathways.`,`Name one specific contribution in every staff meeting.`]];
+function leaders(){S.lead=S.lead||[];const n=S.lead.length,nx=LEAD.findIndex((x,i)=>!S.lead.includes(''+i));
+return `<div class='card plan'><h3>For school leaders</h3><p class='sm mut'>Tick what is already in place at your school. Educator wellbeing is a shared duty.</p>${LEAD.map((x,i)=>`<label><input type='checkbox' data-a='lead' data-k='${i}' ${S.lead.includes(''+i)?'checked':''}><span><b>${x[0]}</b><br><span class='sm mut'>${x[1]}</span></span></label>`).join('')}<div class='note ${n==6?'n-ok':'n-warn'}' style='margin:12px 0 0'>${n} of 6 in place. ${nx<0?'Strong foundation. Review it each term.':'Next step: '+LEAD[nx][2]}</div></div>`}
+const esc=s=>s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function jar(){const w=S.wins||[],n=Math.min(w.length,36),cols=['var(--pri)','var(--acc)','#F2B84B','#E3856B','#8FB8A0'];let m='';
+for(let i=0;i<n;i++){const row=Math.floor(i/6),c=i%6;m+=`<circle cx='${44+c*18+(row%2?8:0)}' cy='${134-row*16}' r='8' fill='${cols[i%5]}' opacity='.9'/>`}
+return `<div class='card'><h2>Win jar</h2><p class='sm mut'>Burnout can hide what is going well. Drop in one small win a day. On a hard day, pull one out.</p><svg class='jarsvg' viewBox='0 0 180 150' width='100%' style='max-height:170px' role='img' aria-label='Jar holding ${w.length} wins'><path d='M44 20h92M50 20v16c-16 6-22 18-22 36v62c0 8 6 12 14 12h96c8 0 14-4 14-12V72c0-18-6-30-22-36V20' fill='none' stroke='var(--pri)' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/>${m}</svg><p class='sm mut' style='text-align:center'>${w.length} ${w.length==1?'win':'wins'} in your jar</p><input type='text' id='win' maxlength='140' placeholder='Something that went well today' aria-label='A win from today'><button class='btn' data-a='win'>Add to jar</button><button class='btn alt' data-a='pull' ${w.length?'':'disabled'}>Pull a win</button><div id='pull' aria-live='polite'></div></div>`}
+const GR={help:{k:'sup',o:[['me','For me'],['team','My team'],['lead','Leaders']],m:{'Where to go':'me','Helplines in India':'me','Draft a message to ask for support':'me','Your privacy':'me','Support a colleague':'team','Run a 30-minute peer circle':'team','Workload snapshot':'team','For school leaders':'lead'}},learn:{k:'lrn',o:[['r','Relax'],['u','Understand']],m:{'One-minute breathing':'r','Weigh Anchor':'r','Stress reset':'u','Warning signs':'u','Short guides':'u'}},impact:{k:'imp',o:[['m','Measure'],['s','Share']],m:{'Knowledge quiz':'m','Stigma pulse check':'m','Your progress':'m','The pledge':'s','Share and report':'s','Feedback':'s','References':'s'}}};
+function groups(){const G=GR[st.tab];if(!G)return;const cur=st[G.k]||G.o[0][0],cs=[...document.querySelectorAll('#main>.card')];
+cs.forEach(c=>{const h=c.querySelector('h2,h3'),g=h&&G.m[h.textContent];if(g&&g!==cur)c.hidden=true});
+if(cs[0])cs[0].insertAdjacentHTML('beforebegin',`<div class='tabs' role='group'>${G.o.map(o=>`<button data-a='seg' data-g='${G.k}' data-k='${o[0]}' aria-pressed='${o[0]===cur}'>${o[1]}</button>`).join('')}</div>`)}
+function plan(){const k=new Date().toDateString();if(!S.plan||S.plan.k!==k)S.plan={k,x:[]};const l=S.ci.at(-1),it=PLAN.slice();if(l){const m=["e","d","f"].sort((a,b)=>l[b]-l[a])[0];it.push(DIM[m][1])}
+const n=S.plan.x.filter(i=>i<it.length).length;
+return `<div class="card plan"><h2>Today's plan</h2><p class="sm mut">${n} of ${it.length} done. Small daily actions protect against burnout.${l?" The last item is based on your latest check-in.":""}</p>${it.map((t,i)=>`<label class="${S.plan.x.includes(i)?"done":""}"><input type="checkbox" data-a="tick" data-i="${i}" ${S.plan.x.includes(i)?"checked":""}><span>${t}</span></label>`).join("")}</div>`}
+const V={
+home(){const l=S.ci.at(-1);return `<div class="hero"><svg class="logo" aria-hidden="true"><use href="#logo"/></svg><div><h1 style="margin:0">Steady yourself.</h1><div class="mut sm">Wellbeing for special educators</div></div></div>
+<p class="mut">Private, stigma-free support for people who care for children with special needs. Everything you enter stays on this device.</p>
+<button class="btn" data-a="go" data-t="check">Start a 2-minute check-in</button><button class="btn alt" data-a="go" data-t="learn">Breathe for one minute</button>
+<div class="card soft" style="margin-top:14px">${l?`<h3>Your last check-in: ${level(l.o)[0]}</h3><p class="mut sm" style="margin:0">${dt(l.t)}. A weekly check-in shows your trend.</p>`:`<h3>No check-in yet</h3><p class="mut sm" style="margin:0">It takes about two minutes and helps you spot strain early.</p>`}</div>
+${plan()}${jar()}
+<details class='card'><summary>About Anchor</summary><p style='margin-top:10px'><b>Vision.</b> A school culture where educators' mental health is treated as essential infrastructure.</p><p><b>Mission.</b> Accessible, confidential, stigma-free psychological support for those who care for children with special needs.</p><p style='margin:0'><b>Who we serve.</b> Special educators, resource teachers, therapists and aides, with early-career and high-burnout-risk groups first.</p></details>
+<p class="sm mut">Anchor is a self-reflection and education tool. It is not a diagnosis or a substitute for professional care.</p>`},
+
+check(){
+if(st.q){const i=st.q.i;return `<div class="prog" role="progressbar" aria-valuemin="0" aria-valuemax="10" aria-valuenow="${i}"><i style="width:${i*10}%"></i></div>
+<p class="mut sm">Question ${i+1} of 10. Think about the last two weeks.</p><h2 id="q" tabindex="-1">${ITEMS[i][1]}</h2>
+<div class="opts">${SC.map((s,n)=>`<button class="btn" data-a="ans" data-v="${n}">${s}</button>`).join("")}</div>
+<p style="margin-top:14px">${i?`<button class="btn alt" data-a="back">Back</button>`:""}<button class="btn alt" data-a="quit">Stop</button></p>`}
+if(st.res){const r=st.res,L=level(r.o);return `${r.s?crisisBox:""}<h1>${L[0]}</h1><div class="note ${L[1]}">${L[2]}</div>
+<div class="card">${meter("Exhaustion",r.e)}${meter("Detachment",r.d)}${meter("Strain from low effectiveness",r.f)}<p class="sm mut" style="margin:8px 0 0">Higher means more strain. This is not a diagnosis.</p></div>
+<div class="card"><h3>One thing to try this week</h3><p>${DIM[["e","d","f"].sort((a,b)=>r[b]-r[a])[0]][1]}</p><button class="btn alt" data-a="go" data-t="help">See support options</button></div>
+<button class="btn" data-a="done">Done</button>`}
+const h=S.ci,pts=h.slice(-8);let sp="";
+if(pts.length>1){const w=280,p=pts.map((x,i)=>`${6+i*(w-12)/(pts.length-1)},${54-x.o*.48}`).join(" ");sp=`<svg viewBox="0 0 ${w} 60" width="100%" role="img" aria-label="Trend of your last ${pts.length} check-ins"><polyline points="${p}" fill="none" stroke="var(--pri)" stroke-width="2.5" stroke-linejoin="round"/></svg><p class="sm mut">Lower is better. Each point is one check-in.</p>`}
+return `<h1>Check-in</h1><p>Ten short statements about the last two weeks. Your answers are saved only on this device. Answer for yourself, not for how you think you should feel.</p>
+<button class="btn" data-a="start">${h.length?"Start a new check-in":"Start check-in"}</button>
+${h.length?`<div class="card" style="margin-top:14px"><h3>Your history</h3>${sp}${h.slice().reverse().slice(0,6).map(x=>`<div class="line"><span>${dt(x.t)}</span><strong>${level(x.o)[0]}</strong></div>`).join("")}</div>`:""}`},
+
+learn(){return `<h1>Learn</h1>
+<div class="card"><h2>One-minute breathing</h2><p class="mut sm">Breathe in for 4, hold for 4, out for 6. Five rounds.</p>
+<div class="breath"><div class="orb" id="orb" aria-live="polite">Ready</div></div>
+<button class="btn" id="bb" data-a="breathe">Start</button></div>
+${game()}<div class="card"><h2>Short guides</h2>${LEARN.map(l=>`<details><summary>${l[0]}</summary><p>${l[1]}</p></details>`).join("")}</div>
+${reset()}${signs()}`},
+
+help(){return `<h1>Support</h1><p>Asking for help is a professional skill. Start at the step that feels right.</p>
+<div class="card"><h3>Where to go</h3>${LADDER.map((l,i)=>`<div class="line"><span><strong>${i+1}. ${l[0]}</strong><br><span class="mut sm">${l[1]}</span></span></div>`).join("")}</div>
+<div class="card"><h3>Helplines in India</h3>${LINES.map(l=>`<div class="line"><span>${l[0]}</span><a href="tel:${l[2]}">${l[1]}</a></div>`).join("")}<p class="sm mut" style="margin:8px 0 0">Numbers can change. Please confirm on the official websites.</p></div>
+<div class="card"><h3>Draft a message to ask for support</h3><p class="sm mut">Pick who you're writing to, edit the text, then copy and send it yourself.</p>
+<button class="btn alt" data-a="msg" data-k="colleague">Colleague</button><button class="btn alt" data-a="msg" data-k="supervisor">Supervisor</button><button class="btn alt" data-a="msg" data-k="counsellor">Counsellor</button>
+<textarea id="msg" rows="5" aria-label="Message draft"></textarea><button class="btn" style="margin-top:8px" data-a="copy" data-s="#msg">Copy message</button></div>
+<div class="card"><h3>Workload snapshot</h3><p class="sm mut">Turn your numbers into a short summary for a conversation with your head or supervisor.</p>
+<label class="f">Students on your caseload<input type="number" id="w1" min="0" inputmode="numeric"></label>
+<label class="f">Hours a week of protected planning time<input type="number" id="w2" min="0" inputmode="numeric"></label>
+<label class="f">IEPs or reports due this month<input type="number" id="w3" min="0" inputmode="numeric"></label>
+<label class="f">Behaviour incidents you handled this week<input type="number" id="w4" min="0" inputmode="numeric"></label>
+<button class="btn alt" data-a="wl">Create summary</button><textarea id="wlo" rows="5" aria-label="Workload summary"></textarea><button class="btn" style="margin-top:8px" data-a="copy" data-s="#wlo">Copy summary</button></div>
+${colleague()}${circle()}${leaders()}<div class="card soft"><h3>Your privacy</h3><p class="sm">Anchor stores nothing on a server. Counsellors and supervisors see only what you choose to send them.</p><button class="btn alt" data-a="wipe">Delete all my data</button></div>`},
+
+impact(){const q=S.quiz||{},p=S.pulse||{};const d=(a,b,u)=>a!=null&&b!=null?`${a}${u} to ${b}${u}`:a!=null?`${a}${u} (retake later to see change)`:"Not taken yet";
+return `<h1>Impact</h1><p>Check what you know, how it feels to ask for help, and make a pledge.</p>
+<div class="card"><h2>Knowledge quiz</h2>${QUIZ.map((x,i)=>`<fieldset><legend>${i+1}. ${x[0]}</legend>${seg("q"+i,[[1,"True"],[0,"False"]])}</fieldset>`).join("")}<button class="btn" data-a="quiz">See my score</button><div id="qr"></div></div>
+<div class="card"><h2>Stigma pulse check</h2>${PULSE.map((x,i)=>`<fieldset><legend>${x[0]}</legend>${seg("p"+i,[[1,"Disagree"],[2,"Unsure"],[3,"Agree"]])}</fieldset>`).join("")}<button class="btn" data-a="pulse">Save my answers</button></div>
+<div class="card soft"><h3>Your progress</h3><div class="line"><span>Check-ins done</span><strong>${S.ci.length}</strong></div><div class="line"><span>Quiz score</span><strong>${d(q.pre,q.post,"/5")}</strong></div><div class="line"><span>Comfort asking for help</span><strong>${d(p.pre,p.post,"%")}</strong></div></div>
+<div class="card"><h2>The pledge</h2>${S.pledge?`<div class="note n-ok">You pledged on ${dt(S.pledge)}. Thank you.</div>`:""}<p>I will check in with one educator in my life, and with myself.</p><button class="btn" data-a="pledge">${S.pledge?"Pledge again":"I pledge"}</button></div>
+<div class='card'><h3>Share and report</h3><p class='sm mut'>Invite a colleague, or copy an anonymous summary for your school coordinator. It contains no names.</p><button class='btn alt' data-a='share' data-k='inv'>Copy invitation</button><button class='btn alt' data-a='share' data-k='sum'>Copy my summary</button><textarea id='msg' rows='3' readonly aria-label='Text to share'></textarea></div>
+<div class='card'><h3>References</h3><details><summary>Sources behind Anchor</summary><p class='sm'>American Psychological Association (2017). Ethical principles of psychologists and code of conduct.<br><br>Demerouti, Bakker, Nachreiner and Schaufeli (2001). The job demands-resources model of burnout. Journal of Applied Psychology, 86(3), 499-512.<br><br>Edmondson (1999). Psychological safety and learning behavior in work teams. Administrative Science Quarterly, 44(2), 350-383.<br><br>Lazarus and Folkman (1984). Stress, appraisal, and coping. Springer.<br><br>Maslach and Leiter (2016). Understanding the burnout experience. World Psychiatry, 15(2), 103-111.<br><br>Government of India: Rehabilitation Council of India Act (1992); Rights of Persons with Disabilities Act (2016); Mental Healthcare Act (2017).<br><br>Pope and Vasquez (2016). Ethics in psychotherapy and counseling (5th ed.). Wiley.</p></details></div>
+<div class="card"><h3>Feedback</h3><p class="sm mut">Saved on this device only. Copy it to share with the Anchor team.</p><textarea id="fb" rows="3" aria-label="Feedback">${(S.fb||"").replace(/</g,"&lt;")}</textarea><button class="btn alt" style="margin-top:8px" data-a="fb">Save feedback</button></div>`}};
+
+function render(){
+$("#tabs").innerHTML=TABS.map(t=>`<button data-a="go" data-t="${t[0]}" ${st.tab==t[0]?'aria-current="page"':""}><svg class="ic" aria-hidden="true"><use href="#i-${t[0]}"/></svg><span>${t[1]}</span></button>`).join("");
+$("#main").innerHTML=V[st.tab]();deco();groups();scrollTo(0,0);const q=$("#q");if(q)q.focus({preventScroll:true})}
+function finish(){const a=st.q.a,g=k=>mean(ITEMS.map((x,i)=>x[0]==k?(k=="f"?4-a[i]:a[i]):null).filter(x=>x!==null))/4*100|0;
+const r={t:Date.now(),e:g("e"),d:g("d"),f:g("f"),s:a[9]>=1};r.o=Math.round((r.e+r.d+r.f)/3);S.ci.push(r);save();st.res=r;st.q=null;render()}
+let bt=null;
+function stopB(){clearTimeout(bt);bt=null}
+function breathe(){const b=$("#bb"),o=$("#orb");if(bt){stopB();o.style.transform="";o.textContent="Ready";b.textContent="Start";return}
+b.textContent="Stop";let n=0;const P=[["Breathe in",4,1.25],["Hold",4,1.25],["Breathe out",6,1]];
+(function step(i){if(!document.body.contains(o)||i>=15){stopB();if(document.body.contains(o)){o.style.transform="";o.textContent="Well done";b.textContent="Start again"}return}
+const p=P[i%3];o.textContent=p[0];o.style.transitionDuration=p[1]+"s";o.style.transform=`scale(${p[2]})`;bt=setTimeout(()=>step(i+1),p[1]*1000)})(0)}
+const A={
+gp(d){const g=st.g,c=GAME[g.i],ok=d.v===c[1];g.ok+=ok?1:0;c[1]=="D"?g.d++:g.r++;g.fb=(ok?"Yes. ":"Not quite. ")+c[2];g.i++;const y=scrollY;render();scrollTo(0,y);const b=document.querySelector("[data-a=gp],[data-a=greset]");if(b)b.focus({preventScroll:true})},
+greset(){st.g=null;const y=scrollY;render();scrollTo(0,y)},
+seg(d){st[d.g]=d.k;keep()},
+win(){const v=$('#win').value.trim();if(!v)return toast('Write one small win first');S.wins=S.wins||[];S.wins.push({t:Date.now(),x:v.slice(0,140)});save();keep();toast('Added to your jar')},
+pull(){const w=S.wins||[];if(!w.length)return;const x=w[Math.floor(Math.random()*w.length)],j=document.querySelector('.jarsvg');if(j){j.classList.remove('shake');void j.getBoundingClientRect();j.classList.add('shake')}
+setTimeout(()=>{const p=$('#pull');if(p)p.innerHTML=`<div class='note n-ok' style='margin-top:10px'><b>${dt(x.t)}</b><br>${esc(x.x)}</div>`},j?600:0)},
+sg(d){S.sg=S.sg||[];tg(S.sg,d.k);save();keep()},
+lead(d){S.lead=S.lead||[];tg(S.lead,d.k);save();keep()},
+sr(d){st.sr=+d.i;keep()},
+share(d){const l=S.ci.at(-1),q=S.quiz||{},p=S.pulse||{};const t=d.k=='inv'?`I have been using Anchor, a private wellbeing app for special educators: a 2-minute check-in, breathing, a short game and support options. Nothing is stored on a server. Want to try it with me?`:`Anchor summary (anonymous, no names): check-ins done ${S.ci.length}; latest level ${l?level(l.o)[0]:'none'}; quiz ${q.pre??'-'} to ${q.post??'-'} of 5; comfort asking for help ${p.pre??'-'} to ${p.post??'-'}%; pledge ${S.pledge?'signed':'not yet'}.`;$('#msg').value=t;copy(t)},
+tick(d){const i=+d.i,x=S.plan.x,j=x.indexOf(i);j<0?x.push(i):x.splice(j,1);save();const y=scrollY;render();scrollTo(0,y)},
+go(d){stopB();st.tab=d.t;st.q=null;st.res=null;render()},
+sos(){$("#sosl").innerHTML=LINES.map(l=>`<div class="line"><span>${l[0]}</span><a href="tel:${l[2]}">${l[1]}</a></div>`).join("");$("#sos").showModal()},
+close(){$("#sos").close()},
+start(){st.q={i:0,a:[]};render()},
+ans(d){st.q.a[st.q.i]=+d.v;st.q.i++;st.q.i>=10?finish():render()},
+back(){st.q.i--;render()},
+quit(){st.q=null;render()},
+done(){st.res=null;st.tab="home";render()},
+breathe,
+msg(d){$("#msg").value=MSG[d.k]},
+copy(d){const t=$(d.s);if(!t.value.trim())return toast("Nothing to copy yet");copy(t.value)},
+wl(){const v=[1,2,3,4].map(i=>$("#w"+i).value);if(v.some(x=>x===""))return toast("Fill in all four numbers");
+$("#wlo").value=`Workload snapshot: I currently support ${v[0]} students, with ${v[1]} hours a week of protected planning time. This month I have ${v[2]} IEPs or reports due, and I handled ${v[3]} behaviour incidents this week. I'd like to discuss whether my caseload, planning time and support are sustainable.`},
+wipe(){if(confirm("Delete all check-ins, scores and notes from this device? This can't be undone.")){S={ci:[]};try{localStorage.removeItem("anchor")}catch(e){}toast("Data deleted");render()}},
+quiz(){const a=QUIZ.map((x,i)=>{const c=document.querySelector(`input[name=q${i}]:checked`);return c?+c.value:null});if(a.includes(null))return toast("Answer all five statements");
+const sc=a.filter((v,i)=>!!v===QUIZ[i][1]).length;S.quiz=S.quiz||{};S.quiz[S.quiz.pre==null?"pre":"post"]=sc;save();
+$("#qr").innerHTML=`<div class="note n-ok" style="margin-top:12px"><b>You scored ${sc}/5.</b><br>${QUIZ.map((x,i)=>!!a[i]===x[1]?"":`Statement ${i+1} is ${x[1]?"true":"false"}. `).join("")||"All correct."}</div>`;const t=$("#qr");t.scrollIntoView({block:"center"})},
+pulse(){const v=PULSE.map((x,i)=>{const c=document.querySelector(`input[name=p${i}]:checked`);return c?(x[1]>0?+c.value:4-c.value):null});if(v.includes(null))return toast("Answer all four statements");
+const s=Math.round((mean(v)-1)/2*100);S.pulse=S.pulse||{};S.pulse[S.pulse.pre==null?"pre":"post"]=s;save();toast("Saved");render()},
+pledge(){S.pledge=Date.now();save();toast("Pledge saved");render()},
+fb(){S.fb=$("#fb").value.slice(0,1000);save();toast("Saved")}};
+document.addEventListener("click",e=>{const b=e.target.closest("[data-a]");if(b&&A[b.dataset.a])A[b.dataset.a](b.dataset)});
+render();
+</script>
+</body>
+</html>
